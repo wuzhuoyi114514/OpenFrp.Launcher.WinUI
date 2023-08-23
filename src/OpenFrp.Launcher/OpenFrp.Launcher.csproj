@@ -7,7 +7,7 @@
 		<PlatformTarget>AnyCPU</PlatformTarget>
 		<LangVersion>preview</LangVersion>
 		<Nullable>enable</Nullable>
-		<AssemblyTitle>OpenFrp - Let's Fix it</AssemblyTitle>
+		<AssemblyTitle>OpenFrp - 快来搞爆他！</AssemblyTitle>
 		<Authors>AYue</Authors>
 		<ApplicationManifest>.\Properties\App.manifest</ApplicationManifest>
 		<ImplicitUsings>enable</ImplicitUsings>
