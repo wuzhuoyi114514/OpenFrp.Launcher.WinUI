@@ -9,8 +9,8 @@
                 <ContextMenu>
                     <MenuItem
                         Command="ApplicationCommands.Copy"
-                        Header="复制"
-                        InputGestureText="Ctrl + C">
+                        Header="复制他！"
+                        InputGestureText="Ctrl + C！">
                         <MenuItem.Icon>
                             <ui:SymbolIcon Symbol="Copy" />
                         </MenuItem.Icon>
