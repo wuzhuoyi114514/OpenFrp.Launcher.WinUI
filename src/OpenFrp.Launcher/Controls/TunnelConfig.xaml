@@ -23,8 +23,8 @@
                             <ui:SimpleStackPanel Grid.Column="0" Spacing="8">
                                 <TextBox
                                     Grid.ColumnSpan="2"
-                                    ui:ControlHelper.Header="已选择的隧道"
-                                    AutomationProperties.Name="已选择的隧道"
+                                    ui:ControlHelper.Header="已选择过的隧道"
+                                    AutomationProperties.Name="已选择过的隧道"
                                     IsEnabled="{TemplateBinding IsCreating}"
                                     IsReadOnly="True"
                                     Text="{Binding NodeInfo.NodeName, RelativeSource={RelativeSource Mode=TemplatedParent}}" />
@@ -32,17 +32,17 @@
                                     Name="Of_Protocol_ComboBox"
                                     Grid.ColumnSpan="2"
                                     Width="{Binding ActualWidth, RelativeSource={RelativeSource Mode=FindAncestor, AncestorLevel=1, AncestorType=ui:SimpleStackPanel}}"
-                                    ui:ControlHelper.Header="已选择的隧道模式"
+                                    ui:ControlHelper.Header="已选择过的隧道模式"
                                     ui:ControlHelper.PlaceholderText="选择后可用..."
-                                    AutomationProperties.Name="已选择的隧道模式"
+                                    AutomationProperties.Name="已选择过的隧道模式"
                                     IsEnabled="{TemplateBinding IsCreating}"
                                     IsReadOnly="True"
                                     ItemsSource="{Binding NodeInfo.ProtocolSupport.ComboBoxUICollection, RelativeSource={RelativeSource Mode=TemplatedParent}}"
                                     SelectedIndex="{Binding NodeInfo.ProtocolSupport.DefualtIndex, RelativeSource={RelativeSource Mode=TemplatedParent}, Mode=OneWay}" />
                                 <TextBox
-                                    ui:ControlHelper.Header="本地地址"
-                                    ui:ControlHelper.PlaceholderText="127.0.0.1"
-                                    AutomationProperties.Name="本地地址"
+                                    ui:ControlHelper.Header="本地地址（不要更改"
+                                    ui:ControlHelper.PlaceholderText="127.0.0.1（不接受英文形式"
+                                    AutomationProperties.Name="本地地址（不要更改"
                                     Text="{Binding Config.LocalAddress, RelativeSource={RelativeSource Mode=TemplatedParent}}" />
 
                             </ui:SimpleStackPanel>
@@ -50,16 +50,16 @@
                                 <TextBox
                                     x:Name="Of_TunnelName_Box"
                                     Grid.ColumnSpan="2"
-                                    ui:ControlHelper.Header="隧道名称"
-                                    ui:ControlHelper.PlaceholderText="不填为随机"
-                                    AutomationProperties.Name="隧道名称"
+                                    ui:ControlHelper.Header="隧道名称（自定义他"
+                                    ui:ControlHelper.PlaceholderText="不填为随机生成"
+                                    AutomationProperties.Name="隧道名称（自定义他"
                                     MaxLength="20"
                                     Text="{Binding Config.TunnelName, RelativeSource={RelativeSource Mode=TemplatedParent}}" />
                                 <ui:NumberBox
                                     Name="Of_RemotePort_Box"
-                                    ui:ControlHelper.Header="远程端口"
-                                    ui:ControlHelper.PlaceholderText="不填为随机"
-                                    AutomationProperties.Name="远程端口"
+                                    ui:ControlHelper.Header="远程端口（访问时附带的端口，例如xxx.xxx.xxx.openfrp.top:你的远程端口"
+                                    ui:ControlHelper.PlaceholderText="不填为随机生成"
+                                    AutomationProperties.Name="远程端口（访问时附带的端口，例如xxx.xxx.xxx.openfrp.top:你的远程端口"
                                     IsEnabled="{TemplateBinding IsCreating}"
                                     Maximum="65535"
                                     Minimum="1" />
@@ -76,10 +76,10 @@
                         <ui:HyperlinkButton
                             Margin="0,0,8,4"
                             Padding="16,12"
-                            AutomationProperties.Name="从已有进程中选取端口"
+                            AutomationProperties.Name="从已有进程中选取端口（Minecraft?"
                             Command="{Binding SelectPortOfProcessCommand}"
                             IsEnabled="{TemplateBinding IsCreating}"
-                            ToolTip="从已有进程中选取端口">
+                            ToolTip="从已有进程中选取端口（Minecraft?">
                             <ui:HyperlinkButton.DataContext>
                                 <viewmodels:CreateTunnelModel />
                             </ui:HyperlinkButton.DataContext>
@@ -106,13 +106,13 @@
                                 <TextBlock
                                     Grid.Column="2"
                                     VerticalAlignment="Center"
-                                    Text="从已有进程中选取端口"
+                                    Text="从已有进程中选取端口（Minecraft?"
                                     TextTrimming="CharacterEllipsis" />
                             </Grid>
                         </ui:HyperlinkButton>
 
 
-                        <TextBlock Style="{StaticResource SubtitleTextBlockStyle}" Text="高级选项" />
+                        <TextBlock Style="{StaticResource SubtitleTextBlockStyle}" Text="高级选项(一般不要用" />
                         <TextBlock
                             Margin="0,-4,0,0"
                             Foreground="{DynamicResource SystemControlForegroundBaseMediumBrush}"
@@ -132,7 +132,7 @@
                             <!--  数据加密,ProxyProtocol,域名绑定,HOST重写  -->
                             <ui:SimpleStackPanel Grid.Column="0" Spacing="8">
                                 <ui:ToggleSwitch
-                                    AutomationProperties.HelpText="开启数据加密可能会加大服务器压力,导致延迟。"
+                                    AutomationProperties.HelpText="开启数据加密可能会加大服务器压力,导致延迟。（快速的操openfrp服务器"
                                     Header="数据加密"
                                     IsOn="{Binding Config.EncryptMode, RelativeSource={RelativeSource Mode=TemplatedParent}}" />
                                 <ComboBox
@@ -141,14 +141,14 @@
                                     AutomationProperties.HelpText="Proxy Protocol 开启时,如果服务并不支持 或 未使用该协议,那么会无法访问。"
                                     AutomationProperties.Name="Proxy Protocol"
                                     SelectedIndex="{Binding Config.ProxyProtocolVersion, RelativeSource={RelativeSource Mode=TemplatedParent}}">
-                                    <ComboBoxItem Content="关闭" />
+                                    <ComboBoxItem Content="关闭（推荐" />
                                     <ComboBoxItem Content="V1" />
-                                    <ComboBoxItem Content="V2 (推荐)" />
+                                    <ComboBoxItem Content="V2 " />
                                 </ComboBox>
                                 <TextBox
-                                    ui:ControlHelper.Header="绑定域名"
-                                    ui:ControlHelper.PlaceholderText="用逗号隔开"
-                                    AutomationProperties.Name="绑定域名"
+                                    ui:ControlHelper.Header="绑定域名（http/s"
+                                    ui:ControlHelper.PlaceholderText="用逗号隔开（http/s"
+                                    AutomationProperties.Name="绑定域名（http/s"
                                     Text="{Binding Config.BindDomain, Converter={StaticResource ArrayConverter}, RelativeSource={RelativeSource Mode=TemplatedParent}}" />
                                 <TextBox
                                     ui:ControlHelper.Header="HOST 重写"
@@ -195,14 +195,17 @@
                                     Grid.Row="0"
                                     Foreground="{DynamicResource SystemControlForegroundBaseMediumBrush}"
                                     TextWrapping="Wrap">
-                                    <Run Text="Proxy Protocol 开启时,如果服务并不支持 / 未使用该协议,那么会无法访问。" />
+                                    <Run Text="Proxy Protocol 开启时,如果服务并不支持 / 未使用该协议,那么会无法访问他。" />
                                     <LineBreak />
                                     <Run Text="开启数据加密 / 数据压缩可能会加大服务器和客户端压力。" />
                                     <LineBreak />
-                                    <Run Text="想要讨论这些? 可以在官方群聊讨论。" />
+                                    <Run Text="你想要讨论这些? 可以在官方群聊讨论！" />
                                     <LineBreak />
                                     <LineBreak />
                                     <Run Foreground="{DynamicResource SystemControlErrorTextForegroundBrush}" Text="因您没有仔细阅读本平台公告，造成业务损失或奇葩问题，由此产生的任何问题本平台概不负责。" />
+                                    <LineBreak />
+                                    <LineBreak />
+                                    <Run Foreground="{DynamicResource SystemControlErrorTextForegroundBrush}" Text="我认为你是聪明的。" />
                                     <LineBreak />
                                     <LineBreak />
                                     <Run Foreground="{DynamicResource SystemControlErrorTextForegroundBrush}" Text="穿透企业内网的用户，请注意设置访问权限，由此产生的任何问题本平台概不负责。" />
