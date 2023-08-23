@@ -6,14 +6,14 @@
     xmlns:local="clr-namespace:OpenFrp.Launcher.Controls"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:ui="http://schemas.modernwpf.com/2019"
-    Title="登录"
+    Title="登录？"
     d:DesignHeight="768"
     d:DesignWidth="1366"
     CloseButtonClick="ContentDialog_CloseButtonClick"
-    CloseButtonText="取消"
+    CloseButtonText="取消？"
     DefaultButton="Primary"
     PrimaryButtonClick="ContentDialog_PrimaryButtonClick"
-    PrimaryButtonText="登录"
+    PrimaryButtonText="登录？"
     mc:Ignorable="d">
 
     <Grid Width="498" Height="280">
@@ -35,34 +35,35 @@
                     Spacing="8">
                     <TextBox
                         x:Name="OfApp_Input_UserName"
-                        ui:ControlHelper.Header="账户"
+                        ui:ControlHelper.Header="你的账户"
                         ui:TextBoxHelper.IsDeleteButtonVisible="True"
-                        AutomationProperties.Name="账户" />
+                        AutomationProperties.Name="你的账户" />
                     <PasswordBox
                         x:Name="OfApp_Input_Password"
-                        ui:ControlHelper.Header="密码"
+                        ui:ControlHelper.Header="你的密码"
                         ui:PasswordBoxHelper.PasswordRevealMode="Peek"
-                        AutomationProperties.Name="密码" />
+                        AutomationProperties.Name="你的密码" />
                 </ui:SimpleStackPanel>
                 <Grid Grid.Row="0" Grid.Column="2">
                     <ui:ScrollViewerEx Grid.Row="2">
                         <TextBlock AutomationProperties.Name="" TextWrapping="Wrap">
-                            <Run FontSize="14" Text="做自己喜欢的事," />
+                            <Run FontSize="14" Text="做不喜欢自己的事（指操自己）" />
                             <LineBreak/>
-                            <Run FontSize="14" Text="希望你的选项得到尊重." />
+                            <Run FontSize="14" Text="希望你的选项不会得到尊重." />
                             <LineBreak />
                             <LineBreak />
 
-                            <Run Text="登录账户即代表您准守以下协议:" />
+                            <Run Text="登录账户即代表您绝对遵守以下协议:" />
                             <LineBreak />
-                            <Hyperlink AutomationProperties.Name="服务条款" NavigateUri="https://www.openfrp.net/policy/">服务条款</Hyperlink>
+                            <Hyperlink AutomationProperties.Name="ZGIT Network服务条款" NavigateUri="https://www.openfrp.net/policy/">ZGIT Network服务条款</Hyperlink>
                             <LineBreak />
-                            <Hyperlink AutomationProperties.Name="隐私策略" NavigateUri="https://www.openfrp.net/privacy/">隐私策略</Hyperlink>
+                            <Hyperlink AutomationProperties.Name="ZGIT Network隐私策略" NavigateUri="https://www.openfrp.net/privacy/">ZGIT Network隐私策略</Hyperlink>
                             <LineBreak />
-                            <Hyperlink AutomationProperties.Name="内容策略" NavigateUri="https://www.openfrp.net/content/">内容策略</Hyperlink>
+                            <Hyperlink AutomationProperties.Name="ZGIT Network内容策略" NavigateUri="https://www.openfrp.net/content/">ZGIT Network内容策略</Hyperlink>
                             <LineBreak />
                             <LineBreak />
-                            <Run Text="因未阅读网站公告导致的业务损失或奇葩问题，或者没带眼镜提出的问题一律不予回复。" />
+                            <Run Text="因未阅读网站公告导致的业务损失或奇葩问题，或者没带眼镜提出的问题一律不予回复（特别是没钱。" />
+                            <Run Text="我认为你是聪明的（Wuzhuoyi" />
                         </TextBlock>
                     </ui:ScrollViewerEx>
                 </Grid>
@@ -72,14 +73,14 @@
                     Grid.ColumnSpan="3">
                     <ui:InfoBar
                         x:Name="OfApp_Output_InfoBar"
-                        Title="登录失败"
+                        Title="登录失败啦"
                         IsClosable="False"
-                        Message="密码错误"
+                        Message="密码错误（请确认你的密码正确！）"
                         Severity="Error">
                         <ui:InfoBar.ActionButton>
                             <Button
                                 HorizontalAlignment="Right"
-                                Content="查看栈错误"
+                                Content="查看栈错误？"
                                 Visibility="Collapsed" />
                         </ui:InfoBar.ActionButton>
                     </ui:InfoBar>
